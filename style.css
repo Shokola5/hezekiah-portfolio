@@ -59,3 +59,55 @@ footer{color:#5b5956}
 .hero h1{font-family:'Poppins',sans-serif;font-size:clamp(3.2rem,6.4vw,6.6rem)}
 .hero-art{overflow:hidden;border-radius:24px}
 @media(max-width:850px){.hero h1{font-size:clamp(2.8rem,13vw,5rem)}}
+/* ===== Image treatment: curved "wrap-around screen" carousel (VK Fest pin) ===== */
+:root{--glow-a:#ff2fb3;--glow-b:#3d5bff}
+.work-card img,.strip-panel img,.video-card video{filter:saturate(1.35) contrast(1.12) brightness(1.03)}
+/* project thumbnails: curved screens facing a central viewer */
+.work-grid{perspective:1400px;perspective-origin:50% 40%}
+.work-card{border-radius:22px;transform-style:preserve-3d;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 0 40px -12px var(--glow-a),0 30px 60px -30px #000}
+.work-card:nth-child(even){transform:rotateY(-9deg);transform-origin:left center;box-shadow:0 0 0 1px rgba(255,255,255,.08),0 0 40px -12px var(--glow-b),0 30px 60px -30px #000}
+.work-card:nth-child(odd):not(.wide){transform:rotateY(9deg);transform-origin:right center}
+.work-card.wide{transform:none;border-radius:28px/40px}
+.work-card:after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.45),transparent 18%,transparent 82%,rgba(0,0,0,.45)),linear-gradient(180deg,rgba(255,255,255,.08),transparent 25%)}
+.work-card:hover,.work-card:nth-child(n):hover{transform:rotateY(0) translateZ(30px);box-shadow:0 0 0 1px rgba(255,47,179,.5),0 0 70px -10px var(--glow-a)}
+.work-card:hover img{filter:saturate(1.5) contrast(1.15) brightness(.85)}
+/* Prayer Walk: a three-panel cylinder wrap */
+.continuous-strip{perspective:1100px;background:transparent;border:0;overflow:visible;gap:6px}
+.strip-panel{border-radius:18px;box-shadow:0 0 30px -10px var(--glow-a)}
+.strip-panel:first-child{transform:rotateY(28deg) scale(.92);transform-origin:right center}
+.strip-panel:last-child{transform:rotateY(-28deg) scale(.92);transform-origin:left center;box-shadow:0 0 30px -10px var(--glow-b)}
+.strip-panel:nth-child(2){transform:translateZ(20px);z-index:1}
+/* videos as curved screens */
+.video-grid{perspective:1400px}
+.video-card{padding:0;overflow:hidden;border-radius:24px;box-shadow:0 0 0 1px rgba(255,255,255,.07),0 0 50px -18px var(--glow-a)}
+.video-card:nth-child(1){transform:rotateY(7deg);transform-origin:right center}
+.video-card:nth-child(2){transform:rotateY(-7deg);transform-origin:left center;box-shadow:0 0 0 1px rgba(255,255,255,.07),0 0 50px -18px var(--glow-b)}
+.video-card video{border-radius:24px 24px 0 0}.video-card>div{padding:16px 20px 20px}
+/* hero poster: real work on a glowing curved screen */
+.poster-stack{background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.85)),url(assets/images/mega-praise.webp) center/cover;border-radius:24px;box-shadow:0 0 0 1px rgba(255,255,255,.1),0 0 70px -8px var(--glow-a),-30px 0 80px -30px var(--glow-b);filter:saturate(1.3) contrast(1.1)}
+.stack-label{color:#fff;text-shadow:0 2px 20px rgba(255,47,179,.8)}.stack-meta{color:#ddd}
+@media(max-width:850px){.work-card,.work-card:nth-child(n),.video-card:nth-child(n){transform:none}.strip-panel:nth-child(n){transform:none}.continuous-strip{overflow-x:auto}}
+@media(prefers-reduced-motion:reduce){.work-card:hover{transform:none}}
+/* ===== Image treatment: "Festival curved screens" (VK Fest pin) — saturated grade, magenta→blue gradient frame, repeating label band, curved-panel perspective, gloss ===== */
+:root{--fest-m:#ff2ba0;--fest-b:#2f6bff;--fest-g:#39ff6a}
+.work-grid,.video-grid,.continuous-strip{perspective:1400px}
+.work-card,.video-card,.poster-stack{--frame:linear-gradient(120deg,var(--fest-m),#8a3bff 50%,var(--fest-b))}
+.work-card{border:6px solid transparent;border-radius:22px;background:linear-gradient(#0b0b0c,#0b0b0c) padding-box,var(--frame) border-box}
+.work-card img,.strip-panel img{filter:saturate(1.45) contrast(1.15);border-radius:14px}
+.work-card:before,.video-card:before{content:'HKS • ARTIST   HKS • ARTIST   HKS • ARTIST   HKS • ARTIST   HKS • ARTIST   HKS • ARTIST';white-space:pre;position:absolute;left:0;right:0;top:0;z-index:3;padding:4px 12px;font:800 .58rem 'Poppins',sans-serif;letter-spacing:.2em;color:#fff;overflow:hidden;background:var(--frame);pointer-events:none}
+.work-card:after,.video-card:after{content:'';position:absolute;inset:0;z-index:2;pointer-events:none;border-radius:inherit;background:linear-gradient(115deg,rgba(255,255,255,.18),transparent 30%),radial-gradient(120% 90% at 50% 50%,transparent 60%,rgba(0,0,0,.55))}
+.work-card:nth-child(odd):not(.wide){transform:rotateY(5deg)}.work-card:nth-child(even){transform:rotateY(-5deg)}
+.work-card.wide{transform:none}
+.work-card:hover,.work-card:nth-child(n):hover{transform:rotateY(0) translateY(-4px) scale(1.01);box-shadow:0 0 40px -6px rgba(255,43,160,.55),0 0 60px -20px rgba(47,107,255,.7)}
+.card-overlay{z-index:4}.card-overlay strong{text-transform:uppercase;font-weight:800;letter-spacing:-.01em}
+.card-overlay small,.video-card span{color:var(--fest-g)}
+.strip-panel{transform:rotateY(8deg)}.strip-panel:nth-child(2){transform:scale(1.03);z-index:2}.strip-panel:last-child{transform:rotateY(-8deg)}
+.continuous-strip{border:6px solid transparent;background:linear-gradient(#0b0b0c,#0b0b0c) padding-box,linear-gradient(120deg,var(--fest-m),var(--fest-b)) border-box;overflow:visible}
+.video-card{position:relative;padding:22px 12px 12px;border:5px solid transparent;background:linear-gradient(#111114,#111114) padding-box,var(--frame) border-box;border-radius:24px}
+.video-card:nth-child(1){transform:rotateY(4deg)}.video-card:nth-child(2){transform:rotateY(-4deg)}
+.video-card video{filter:saturate(1.35) contrast(1.12);border-radius:16px;position:relative;z-index:1}
+.video-card:after{z-index:0}.video-card>div{position:relative;z-index:3}
+.video-card h3{text-transform:uppercase;font-weight:800}
+.poster-stack{border:6px solid transparent;background:linear-gradient(160deg,#1b1b1f,#0e0e10) padding-box,var(--frame) border-box;box-shadow:0 0 50px -8px rgba(255,43,160,.6),0 0 80px -20px rgba(47,107,255,.7)}
+.stack-label{background:linear-gradient(120deg,var(--fest-m),var(--fest-b));-webkit-background-clip:text;background-clip:text;color:transparent}
+@media(max-width:850px){.work-card:nth-child(n),.video-card:nth-child(n),.strip-panel:nth-child(n){transform:none}.strip-panel{scroll-snap-align:start}.continuous-strip{overflow-x:auto}}

@@ -153,3 +153,63 @@ footer span:first-child{font-family:'Archivo Black',sans-serif;font-size:1rem}
   .work-grid.loop,.video-grid.loop{margin:0 -4vw;padding:40px 0 30px}
 }
 html,body{overflow-x:clip} /* Theme 2 ticker uses -2vw side margins; stop it causing sideways page scroll */
+
+/* ===================== Motion layer (theme-2-motion) — everything below only applies under html.motion ===================== */
+:root{--ease-out:cubic-bezier(.16,1,.3,1);--spring:cubic-bezier(.34,1.56,.64,1)}
+/* hero entrance */
+.motion .hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding:.06em .04em .1em;margin:-.06em -.04em -.1em}
+.motion .hero h1 .w>span{display:inline-block;translate:0 110%;rotate:6deg;transition:translate .9s var(--ease-out),rotate .9s var(--ease-out);transition-delay:calc(var(--i) * 70ms + 150ms)}
+.motion.ready .hero h1 .w>span{translate:0 0;rotate:0deg}
+.motion .hero .eyebrow,.motion .hero-text,.motion .hero-actions>*{opacity:0;translate:0 18px;transition:opacity .8s var(--ease-out),translate .8s var(--ease-out)}
+.motion .hero .eyebrow{transition-delay:.05s}.motion .hero-text{transition-delay:.55s}
+.motion .hero-actions>:nth-child(1){transition-delay:.7s}.motion .hero-actions>:nth-child(2){transition-delay:.8s}
+.motion.ready .hero .eyebrow,.motion.ready .hero-text,.motion.ready .hero-actions>*{opacity:1;translate:0 0}
+.motion .site-header{opacity:0;translate:0 -12px;transition:opacity .7s var(--ease-out),translate .7s var(--ease-out)}
+.motion.ready .site-header{opacity:1;translate:0 0}
+/* TV pops in, tape strips slide in across it */
+.motion .poster-stack{opacity:0;scale:.92;transition:opacity .9s var(--ease-out) .35s,scale 1.1s var(--spring) .35s}
+.motion.ready .poster-stack{opacity:1;scale:1}
+.motion .hero-art:before,.motion .hero-art:after,.motion .orb{opacity:0;transition:opacity .5s ease,translate 1s var(--ease-out)}
+.motion .hero-art:before{translate:40% -40%}.motion .hero-art:after{translate:60% 0}.motion .orb{translate:-50% 0}
+.motion.ready .hero-art:before{opacity:1;translate:0 0;transition-delay:.85s}
+.motion.ready .hero-art:after{opacity:1;translate:0 0;transition-delay:1s}
+.motion.ready .orb{opacity:1;translate:0 0;transition-delay:1.15s}
+/* TV screen: drifting scanlines + rare soft flicker + breathing glow */
+.motion .poster-stack{overflow:hidden}
+.motion .poster-stack:after{content:'';position:absolute;inset:26px;border-radius:30px/40px;pointer-events:none;overflow:hidden;
+  background:repeating-linear-gradient(180deg,rgba(0,0,0,.14) 0 2px,transparent 2px 5px);background-size:100% 200%;animation:scan 6s linear infinite;mix-blend-mode:multiply}
+@keyframes scan{to{transform:translateY(10px)}}
+.motion .stack-label,.motion .stack-meta{animation:flicker 7s steps(1) infinite}
+@keyframes flicker{0%,100%{opacity:1}47%{opacity:1}47.5%{opacity:.82}48%{opacity:1}48.6%{opacity:.9}49%{opacity:1}}
+.motion .hero-art .poster-stack{will-change:opacity,scale}
+.motion .hero-art,.motion .hero-copy{will-change:transform}
+/* lime service strip marquee */
+.motion .ticker.is-marquee{display:block;overflow:hidden;padding-left:0;padding-right:0}
+.marquee-track{display:flex;width:max-content;animation:marquee 32s linear infinite}
+.marquee-set{display:flex;align-items:center;gap:22px;padding-right:22px;white-space:nowrap;flex:none}
+@keyframes marquee{to{transform:translate3d(-25%,0,0)}}
+.ticker.is-marquee:hover .marquee-track{animation-play-state:paused}
+/* scroll reveals (translate property, so existing transforms such as the strip's tilt are kept) */
+.motion .reveal{opacity:0;translate:0 42px;transition:opacity .9s var(--ease-out),translate .9s var(--ease-out);transition-delay:var(--d,0ms)}
+.motion .reveal.in{opacity:1;translate:0 0}
+.motion .section-head h2:after{transform:scaleX(0);transform-origin:left;transition:transform .9s var(--ease-out) .25s}
+.motion .section-head.in h2:after{transform:scaleX(1)}
+/* lime | pink colour block gently shifting */
+.motion .continuous-project{position:relative;overflow:hidden;isolation:isolate;background:var(--pink)}
+.motion .continuous-project:before{content:'';position:absolute;top:0;bottom:0;left:-10%;width:120%;z-index:-1;background:linear-gradient(90deg,var(--lime) 0 50%,var(--pink) 50% 100%);animation:blockshift 11s ease-in-out infinite alternate}
+@keyframes blockshift{from{transform:translate3d(-3.5%,0,0)}to{transform:translate3d(3.5%,0,0)}}
+/* magnetic / springy buttons */
+.motion .magnetic{transition:translate .5s var(--spring),transform .2s,background .2s,box-shadow .25s}
+/* lightbox entrance */
+.motion .lightbox.open{animation:lbfade .35s ease both}.motion .lightbox.open .lightbox-inner{animation:lbin .55s var(--ease-out) both}
+@keyframes lbfade{from{opacity:0}}@keyframes lbin{from{opacity:0;transform:translateY(24px) scale(.97)}}
+/* cursor dot (desktop) */
+.cursor-dot{position:fixed;left:0;top:0;z-index:200;width:12px;height:12px;margin:-6px 0 0 -6px;pointer-events:none;opacity:0;transition:opacity .25s}
+.cursor-dot:before{content:'';position:absolute;inset:0;border-radius:50%;background:var(--lime);mix-blend-mode:difference;transition:transform .35s var(--spring)}
+.cursor-dot.on{opacity:1}.cursor-dot.big:before{transform:scale(3.2)}
+@media(max-width:850px){
+  .motion .continuous-project{background:var(--pink)}
+  .motion .continuous-project:before{left:0;width:100%;top:-10%;bottom:auto;height:120%;background:linear-gradient(180deg,var(--lime) 0 50%,var(--pink) 50% 100%);animation-name:blockshiftY}
+  @keyframes blockshiftY{from{transform:translate3d(0,-3%,0)}to{transform:translate3d(0,3%,0)}}
+}
+@media(hover:none),(pointer:coarse){.cursor-dot{display:none}}

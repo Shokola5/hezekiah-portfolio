@@ -135,3 +135,21 @@ footer span:first-child{font-family:'Archivo Black',sans-serif;font-size:1rem}
 }
 @media(max-width:480px){.work-card.wide{grid-column:1/-1}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* ===== Endless curved loop (theme-2-loop) — only applied when JS adds .loop (not under reduce-motion) ===== */
+.work-grid.loop,.video-grid.loop{display:block;position:relative;overflow:hidden;perspective:1200px;padding:50px 0 40px;margin:0 calc(-1 * max(4vw,calc((100vw - var(--max))/2 + 4vw)));touch-action:pan-y;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.loop-track{display:flex;gap:14px;width:max-content;align-items:flex-start;transform-style:preserve-3d;will-change:transform}
+.loop .work-card,.loop .work-card.wide,.loop .work-card:nth-child(n){flex:0 0 260px;width:260px;grid-column:auto;transform:none;transition:none;will-change:transform,filter}
+.loop .work-card img,.loop .work-card.wide img{aspect-ratio:4/5;border-radius:22px/40px;box-shadow:0 26px 30px -16px rgba(0,0,0,.45)}
+.loop .card-overlay{opacity:0;transition:opacity .3s}.loop .is-centre .card-overlay,.loop .work-card:hover .card-overlay,.loop .work-card:focus-visible .card-overlay{opacity:1}
+.loop .video-card,.loop .video-card:nth-child(n),.loop .video-card.video-wide{flex:0 0 250px;width:250px;max-width:none;margin:0;grid-column:auto;transform:none;transition:none;will-change:transform,filter}
+.loop .video-card video,.loop .video-card.video-wide video{aspect-ratio:9/14;border-radius:20px/36px}
+.loop .video-card>div{opacity:0;transition:opacity .3s}.loop .video-card.is-centre>div,.loop .video-card:hover>div{opacity:1}
+@media(max-width:850px){
+  .loop .work-card,.loop .work-card.wide,.loop .work-card:nth-child(n){flex-basis:200px;width:200px}
+  .loop .video-card,.loop .video-card:nth-child(n),.loop .video-card.video-wide{flex-basis:210px;width:210px}
+  .loop .video-card video,.loop .video-card.video-wide video{aspect-ratio:9/14}
+  .work-grid.loop,.video-grid.loop{margin:0 -4vw;padding:40px 0 30px}
+}
+html,body{overflow-x:clip} /* Theme 2 ticker uses -2vw side margins; stop it causing sideways page scroll */

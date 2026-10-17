@@ -7,8 +7,9 @@
   const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
 
   /* 1. Hero entrance: split the brush headline into words that rise out of a mask, staggered */
+  // machine-translated pages keep the headline whole, so the translator sees one sentence (it gets a plain fade instead)
   const h1=$('.hero h1');
-  if(h1){
+  if(h1&&!root.classList.contains('lang-mt')){
     h1.setAttribute('aria-label',h1.textContent.replace(/\s+/g,' ').trim());
     let i=0;
     const wrap=node=>{[...node.childNodes].forEach(n=>{

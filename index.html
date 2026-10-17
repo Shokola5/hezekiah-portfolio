@@ -3,39 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="HKS — Hezekiah Kolawole Shobowale. Graphic design, video production, social media and digital creative work.">
-  <title>HKS — Creative & Digital Portfolio</title>
+  <meta name="description" data-i18n-attr="content:meta.desc" content="HKS — Hezekiah Kolawole Shobowale. Graphic design, video production, social media and digital creative work.">
+  <title data-i18n="meta.title">HKS — Creative & Digital Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Permanent+Marker&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>/* language decided before first paint: ?lang= (scripted recordings / shared links) > saved choice > browser */(function(){try{var q=new URLSearchParams(location.search).get("lang"),s=localStorage.getItem("hksLang"),l=(q||s||(navigator.languages&&navigator.languages[0])||navigator.language||"en").toLowerCase();document.documentElement.classList.add(/^it/.test(l)?"lang-it":/^en/.test(l)?"lang-en":"lang-mt")}catch(e){}})()</script>
   <script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("motion");setTimeout(function(){document.documentElement.classList.add("ready")},2500)}</script>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="HKS home">HKS<span>.</span></a>
+    <a class="brand notranslate" translate="no" href="#top" aria-label="HKS home" data-i18n-attr="aria-label:nav.home">HKS<span>.</span></a>
     <nav>
-      <a href="#work">Work</a>
-      <a href="#video">Video</a>
-      <a href="#about">About</a>
-      <a class="nav-cta" href="mailto:shokolagraphics@gmail.com">Let's talk ↗</a>
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#video" data-i18n="nav.video">Video</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <div class="lang-switch notranslate" translate="no" role="group" aria-label="Language">
+        <button type="button" data-lang="en" lang="en" aria-label="English">EN</button><button type="button" data-lang="it" lang="it" aria-label="Italiano">IT</button><label class="lang-more"><span class="lang-face" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg><b class="lang-code"></b></span><select aria-label="More languages" data-i18n-attr="aria-label:lang.more"></select></label>
+      </div>
+      <a class="nav-cta" href="mailto:shokolagraphics@gmail.com" data-i18n="nav.cta">Let's talk ↗</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero section-pad">
       <div class="hero-copy">
-        <p class="eyebrow">CREATIVE & DIGITAL MEDIA · ITALY</p>
-        <h1>I turn ideas into <em>visual experiences.</em></h1>
-        <p class="hero-text">Graphic design, video production, social media, branding and digital concepts — from first idea to final delivery.</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">CREATIVE & DIGITAL MEDIA · ITALY</p>
+        <h1 data-i18n="hero.h1">I turn ideas into <em>visual experiences.</em></h1>
+        <p class="hero-text" data-i18n="hero.text">Graphic design, video production, social media, branding and digital concepts — from first idea to final delivery.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#work">Explore my work ↓</a>
-          <a class="button button-secondary" href="mailto:shokolagraphics@gmail.com">Get in touch ↗</a>
+          <a class="button button-primary" href="#work" data-i18n="hero.explore">Explore my work ↓</a>
+          <a class="button button-secondary" href="mailto:shokolagraphics@gmail.com" data-i18n="hero.touch">Get in touch ↗</a>
         </div>
       </div>
       <div class="hero-art" aria-hidden="true">
         <div class="orb"></div>
-        <div class="poster-stack">
+        <div class="poster-stack notranslate" translate="no">
           <div class="stack-label">DESIGN<br>VIDEO<br>DIGITAL</div>
           <div class="stack-meta">Hezekiah Kolawole <span>Shobowale</span></div>
         </div>
@@ -43,50 +47,50 @@
     </section>
 
     <div class="ticker" aria-hidden="true">
-      <span>GRAPHIC DESIGN</span><b>✦</b><span>VIDEO PRODUCTION</span><b>✦</b><span>SOCIAL MEDIA</span><b>✦</b><span>BRANDING</span><b>✦</b><span>DIGITAL CREATIVE</span><b>✦</b>
+      <span data-i18n="tick.gd">GRAPHIC DESIGN</span><b>✦</b><span data-i18n="tick.vp">VIDEO PRODUCTION</span><b>✦</b><span data-i18n="tick.sm">SOCIAL MEDIA</span><b>✦</b><span data-i18n="tick.br">BRANDING</span><b>✦</b><span data-i18n="tick.dc">DIGITAL CREATIVE</span><b>✦</b>
     </div>
 
     <section id="work" class="section-pad">
       <div class="section-head">
         <div>
-          <p class="eyebrow">01 / SELECTED WORK</p>
-          <h2>Graphic design & campaigns</h2>
+          <p class="eyebrow" data-i18n="work.eyebrow">01 / SELECTED WORK</p>
+          <h2 data-i18n="work.h2">Graphic design & campaigns</h2>
         </div>
-        <p class="section-note">Real client, ministry and campaign work across social media, event communication and visual storytelling.</p>
+        <p class="section-note" data-i18n="work.note">Real client, ministry and campaign work across social media, event communication and visual storytelling.</p>
       </div>
 
       <div class="work-grid">
-        <button class="work-card wide" data-image="assets/images/legacy.webp" data-title="Legacy: Two Men, One Vision" data-type="Campaign / Editorial Design">
-          <img src="assets/images/legacy.webp" alt="Legacy: Two Men, One Vision campaign design" loading="lazy">
-          <span class="card-overlay"><small>CAMPAIGN / EDITORIAL</small><strong>Legacy: Two Men, One Vision</strong></span>
+        <button class="work-card wide" data-image="assets/images/legacy.webp" data-title="Legacy: Two Men, One Vision" data-type="Campaign / Editorial Design" data-i18n-attr="data-type:type.campEd">
+          <img src="assets/images/legacy.webp" alt="Legacy: Two Men, One Vision campaign design" data-i18n-attr="alt:alt.0" loading="lazy">
+          <span class="card-overlay"><small data-i18n="card.campEd">CAMPAIGN / EDITORIAL</small><strong class="notranslate" translate="no">Legacy: Two Men, One Vision</strong></span>
         </button>
-        <button class="work-card" data-image="assets/images/media-booth.webp" data-title="Media Booth" data-type="Event Campaign / Visual Identity">
-          <img src="assets/images/media-booth.webp" alt="Media Booth event design" loading="lazy">
-          <span class="card-overlay"><small>EVENT CAMPAIGN</small><strong>Media Booth</strong></span>
+        <button class="work-card" data-image="assets/images/media-booth.webp" data-title="Media Booth" data-type="Event Campaign / Visual Identity" data-i18n-attr="data-type:type.eventId">
+          <img src="assets/images/media-booth.webp" alt="Media Booth event design" data-i18n-attr="alt:alt.1" loading="lazy">
+          <span class="card-overlay"><small data-i18n="card.event">EVENT CAMPAIGN</small><strong class="notranslate" translate="no">Media Booth</strong></span>
         </button>
-        <button class="work-card" data-image="assets/images/mega-praise.webp" data-title="Mega Praise 2025" data-type="Event Campaign / Typography">
-          <img src="assets/images/mega-praise.webp" alt="Mega Praise 2025 event design" loading="lazy">
-          <span class="card-overlay"><small>EVENT CAMPAIGN</small><strong>Mega Praise 2025</strong></span>
+        <button class="work-card" data-image="assets/images/mega-praise.webp" data-title="Mega Praise 2025" data-type="Event Campaign / Typography" data-i18n-attr="data-type:type.eventTy">
+          <img src="assets/images/mega-praise.webp" alt="Mega Praise 2025 event design" data-i18n-attr="alt:alt.2" loading="lazy">
+          <span class="card-overlay"><small data-i18n="card.event">EVENT CAMPAIGN</small><strong class="notranslate" translate="no">Mega Praise 2025</strong></span>
         </button>
-        <button class="work-card" data-image="assets/images/seed-talk.webp" data-title="Seed Talk" data-type="Branding / Content Format">
-          <img src="assets/images/seed-talk.webp" alt="Seed Talk visual identity" loading="lazy">
-          <span class="card-overlay"><small>BRANDING / FORMAT</small><strong>Seed Talk</strong></span>
+        <button class="work-card" data-image="assets/images/seed-talk.webp" data-title="Seed Talk" data-type="Branding / Content Format" data-i18n-attr="data-type:type.brandFmt">
+          <img src="assets/images/seed-talk.webp" alt="Seed Talk visual identity" data-i18n-attr="alt:alt.3" loading="lazy">
+          <span class="card-overlay"><small data-i18n="card.brand">BRANDING / FORMAT</small><strong class="notranslate" translate="no">Seed Talk</strong></span>
         </button>
-        <button class="work-card" data-image="assets/images/grace-mercy.webp" data-title="Grace & Mercy" data-type="Social Media Design">
-          <img src="assets/images/grace-mercy.webp" alt="Grace and Mercy social media design" loading="lazy">
-          <span class="card-overlay"><small>SOCIAL MEDIA</small><strong>Grace & Mercy</strong></span>
+        <button class="work-card" data-image="assets/images/grace-mercy.webp" data-title="Grace & Mercy" data-type="Social Media Design" data-i18n-attr="data-type:type.socDes">
+          <img src="assets/images/grace-mercy.webp" alt="Grace and Mercy social media design" data-i18n-attr="alt:alt.4" loading="lazy">
+          <span class="card-overlay"><small data-i18n="card.social">SOCIAL MEDIA</small><strong class="notranslate" translate="no">Grace & Mercy</strong></span>
         </button>
-        <button class="work-card" data-image="assets/images/june-2025.webp" data-title="Welcome to June" data-type="Social Media Campaign">
-          <img src="assets/images/june-2025.webp" alt="Welcome to June campaign design" loading="lazy">
-          <span class="card-overlay"><small>SOCIAL CAMPAIGN</small><strong>Welcome to June</strong></span>
+        <button class="work-card" data-image="assets/images/june-2025.webp" data-title="Welcome to June" data-type="Social Media Campaign" data-i18n-attr="data-type:type.socCamp">
+          <img src="assets/images/june-2025.webp" alt="Welcome to June campaign design" data-i18n-attr="alt:alt.5" loading="lazy">
+          <span class="card-overlay"><small data-i18n="card.socCamp">SOCIAL CAMPAIGN</small><strong class="notranslate" translate="no">Welcome to June</strong></span>
         </button>
-        <button class="work-card" data-image="assets/images/psf-mothers.webp" data-title="Happy Mother's Day" data-type="Social Media Design">
-          <img src="assets/images/psf-mothers.webp" alt="Happy Mother's Day design" loading="lazy">
-          <span class="card-overlay"><small>SOCIAL MEDIA</small><strong>Happy Mother's Day</strong></span>
+        <button class="work-card" data-image="assets/images/psf-mothers.webp" data-title="Happy Mother's Day" data-type="Social Media Design" data-i18n-attr="data-type:type.socDes">
+          <img src="assets/images/psf-mothers.webp" alt="Happy Mother's Day design" data-i18n-attr="alt:alt.6" loading="lazy">
+          <span class="card-overlay"><small data-i18n="card.social">SOCIAL MEDIA</small><strong class="notranslate" translate="no">Happy Mother's Day</strong></span>
         </button>
-        <button class="work-card" data-image="assets/images/mothers.webp" data-title="Happy Mother's Month" data-type="Social Media Design">
-          <img src="assets/images/mothers.webp" alt="Happy Mother's Month design" loading="lazy">
-          <span class="card-overlay"><small>SOCIAL MEDIA</small><strong>Happy Mother's Month</strong></span>
+        <button class="work-card" data-image="assets/images/mothers.webp" data-title="Happy Mother's Month" data-type="Social Media Design" data-i18n-attr="data-type:type.socDes">
+          <img src="assets/images/mothers.webp" alt="Happy Mother's Month design" data-i18n-attr="alt:alt.7" loading="lazy">
+          <span class="card-overlay"><small data-i18n="card.social">SOCIAL MEDIA</small><strong class="notranslate" translate="no">Happy Mother's Month</strong></span>
         </button>
       </div>
           </section>
@@ -94,20 +98,20 @@
     <section class="section-pad continuous-project">
       <div class="section-head">
         <div>
-          <p class="eyebrow">01B / CAMPAIGN SERIES</p>
-          <h2>Prayer Walk</h2>
+          <p class="eyebrow" data-i18n="pw.eyebrow">01B / CAMPAIGN SERIES</p>
+          <h2 class="notranslate" translate="no">Prayer Walk</h2>
         </div>
-        <p class="section-note">A continuous three-panel campaign visual for Youth Summer Camp — designed to read as one composition across the full strip.</p>
+        <p class="section-note" data-i18n="pw.note">A continuous three-panel campaign visual for Youth Summer Camp — designed to read as one composition across the full strip.</p>
       </div>
-      <div class="continuous-strip" aria-label="Prayer Walk continuous campaign artwork">
-        <button class="strip-panel" data-image="assets/projects/prayer-walk/prayer-walk-02.jpg" data-title="Prayer Walk — Panel 1" data-type="Campaign / Event Design">
-          <img src="assets/projects/prayer-walk/prayer-walk-02.jpg" alt="Prayer Walk campaign artwork panel 1" loading="lazy">
+      <div class="continuous-strip" aria-label="Prayer Walk continuous campaign artwork" data-i18n-attr="aria-label:pw.aria">
+        <button class="strip-panel" data-image="assets/projects/prayer-walk/prayer-walk-02.jpg" data-title="Prayer Walk — Panel 1" data-type="Campaign / Event Design" data-i18n-attr="data-type:type.campEvent,data-title:title.pw1">
+          <img src="assets/projects/prayer-walk/prayer-walk-02.jpg" alt="Prayer Walk campaign artwork panel 1" data-i18n-attr="alt:alt.8" loading="lazy">
         </button>
-        <button class="strip-panel" data-image="assets/projects/prayer-walk/prayer-walk-03.jpg" data-title="Prayer Walk — Panel 2" data-type="Campaign / Event Design">
-          <img src="assets/projects/prayer-walk/prayer-walk-03.jpg" alt="Prayer Walk campaign artwork panel 2" loading="lazy">
+        <button class="strip-panel" data-image="assets/projects/prayer-walk/prayer-walk-03.jpg" data-title="Prayer Walk — Panel 2" data-type="Campaign / Event Design" data-i18n-attr="data-type:type.campEvent,data-title:title.pw2">
+          <img src="assets/projects/prayer-walk/prayer-walk-03.jpg" alt="Prayer Walk campaign artwork panel 2" data-i18n-attr="alt:alt.9" loading="lazy">
         </button>
-        <button class="strip-panel" data-image="assets/projects/prayer-walk/prayer-walk-04.jpg" data-title="Prayer Walk — Panel 3" data-type="Campaign / Event Design">
-          <img src="assets/projects/prayer-walk/prayer-walk-04.jpg" alt="Prayer Walk campaign artwork panel 3" loading="lazy">
+        <button class="strip-panel" data-image="assets/projects/prayer-walk/prayer-walk-04.jpg" data-title="Prayer Walk — Panel 3" data-type="Campaign / Event Design" data-i18n-attr="data-type:type.campEvent,data-title:title.pw3">
+          <img src="assets/projects/prayer-walk/prayer-walk-04.jpg" alt="Prayer Walk campaign artwork panel 3" data-i18n-attr="alt:alt.10" loading="lazy">
         </button>
       </div>
     </section>
@@ -115,17 +119,17 @@
     <section class="section-pad continuous-project band-youth">
       <div class="section-head">
         <div>
-          <p class="eyebrow">01C / SOCIAL CAMPAIGN</p>
-          <h2>Youth Outreach — Isaiah 41:10 series</h2>
+          <p class="eyebrow" data-i18n="yo.eyebrow">01C / SOCIAL CAMPAIGN</p>
+          <h2 data-i18n="yo.h2"><span class="notranslate" translate="no">Youth Outreach</span> — Isaiah 41:10 series</h2>
         </div>
-        <p class="section-note">A two-post carousel for Youth Outreach built on Isaiah 41:10 — “I Am Here” and “Jesus Is Here” — pairing live worship photography with bold scripture typography.</p>
+        <p class="section-note" data-i18n="yo.note">A two-post carousel for Youth Outreach built on Isaiah 41:10 — “I Am Here” and “Jesus Is Here” — pairing live worship photography with bold scripture typography.</p>
       </div>
-      <div class="continuous-strip" aria-label="Youth Outreach Isaiah 41:10 series">
-        <button class="strip-panel" data-image="assets/images/youth-i-am-here.webp" data-title="I Am Here — Isaiah 41:10" data-type="Social Campaign / Youth Outreach">
-          <img src="assets/images/youth-i-am-here.webp" alt="I Am Here — Youth Outreach graphic with Isaiah 41:10, be not dismayed; for I am thy God" loading="lazy" width="1080" height="1080">
+      <div class="continuous-strip" aria-label="Youth Outreach Isaiah 41:10 series" data-i18n-attr="aria-label:yo.aria">
+        <button class="strip-panel" data-image="assets/images/youth-i-am-here.webp" data-title="I Am Here — Isaiah 41:10" data-type="Social Campaign / Youth Outreach" data-i18n-attr="data-type:type.socYouth">
+          <img src="assets/images/youth-i-am-here.webp" alt="I Am Here — Youth Outreach graphic with Isaiah 41:10, be not dismayed; for I am thy God" data-i18n-attr="alt:alt.11" loading="lazy" width="1080" height="1080">
         </button>
-        <button class="strip-panel" data-image="assets/images/youth-jesus-is-here.webp" data-title="Jesus Is Here — Isaiah 41:10" data-type="Social Campaign / Youth Outreach">
-          <img src="assets/images/youth-jesus-is-here.webp" alt="Jesus Is Here — Youth Outreach graphic with Isaiah 41:10, fear thou not for I am with thee" loading="lazy" width="1080" height="1080">
+        <button class="strip-panel" data-image="assets/images/youth-jesus-is-here.webp" data-title="Jesus Is Here — Isaiah 41:10" data-type="Social Campaign / Youth Outreach" data-i18n-attr="data-type:type.socYouth">
+          <img src="assets/images/youth-jesus-is-here.webp" alt="Jesus Is Here — Youth Outreach graphic with Isaiah 41:10, fear thou not for I am with thee" data-i18n-attr="alt:alt.12" loading="lazy" width="1080" height="1080">
         </button>
       </div>
     </section>
@@ -133,17 +137,17 @@
     <section class="section-pad continuous-project band-retreat">
       <div class="section-head">
         <div>
-          <p class="eyebrow">01D / CAROUSEL / CHURCH EVENT</p>
-          <h2>RCCG EMR 5 Leaders Retreat</h2>
+          <p class="eyebrow" data-i18n="lr.eyebrow">01D / CAROUSEL / CHURCH EVENT</p>
+          <h2 class="notranslate" translate="no">RCCG EMR 5 Leaders Retreat</h2>
         </div>
-        <p class="section-note">“Practical Steps for Churches to Train Their Workers” — a two-slide carousel where the speaker and lectern run across both slides, designed to read as one continuous image.</p>
+        <p class="section-note" data-i18n="lr.note">“Practical Steps for Churches to Train Their Workers” — a two-slide carousel where the speaker and lectern run across both slides, designed to read as one continuous image.</p>
       </div>
-      <div class="continuous-strip" aria-label="RCCG EMR 5 Leaders Retreat continuous carousel">
-        <button class="strip-panel" data-image="assets/projects/leaders-retreat/retreat-01-title.webp" data-title="Leaders Retreat — Slide 1" data-type="Carousel / Church Event">
-          <img src="assets/projects/leaders-retreat/retreat-01-title.webp" alt="Practical Steps for Churches to Train Their Workers — RCCG EMR 5 Leaders Retreat title slide" loading="lazy" width="1080" height="1080">
+      <div class="continuous-strip" aria-label="RCCG EMR 5 Leaders Retreat continuous carousel" data-i18n-attr="aria-label:lr.aria">
+        <button class="strip-panel" data-image="assets/projects/leaders-retreat/retreat-01-title.webp" data-title="Leaders Retreat — Slide 1" data-type="Carousel / Church Event" data-i18n-attr="data-type:type.carChurch,data-title:title.lr1">
+          <img src="assets/projects/leaders-retreat/retreat-01-title.webp" alt="Practical Steps for Churches to Train Their Workers — RCCG EMR 5 Leaders Retreat title slide" data-i18n-attr="alt:alt.13" loading="lazy" width="1080" height="1080">
         </button>
-        <button class="strip-panel" data-image="assets/projects/leaders-retreat/retreat-02-steps.webp" data-title="Leaders Retreat — Slide 2" data-type="Carousel / Church Event">
-          <img src="assets/projects/leaders-retreat/retreat-02-steps.webp" alt="Notepad slide listing steps: train leaders first, encourage theological education, organise regular Bible training classes, develop discipleship and leadership programmes, promote Bible study and doctrinal teaching, support ministers attending theological institutions, build a culture of lifelong learning" loading="lazy" width="1080" height="1080">
+        <button class="strip-panel" data-image="assets/projects/leaders-retreat/retreat-02-steps.webp" data-title="Leaders Retreat — Slide 2" data-type="Carousel / Church Event" data-i18n-attr="data-type:type.carChurch,data-title:title.lr2">
+          <img src="assets/projects/leaders-retreat/retreat-02-steps.webp" alt="Notepad slide listing steps: train leaders first, encourage theological education, organise regular Bible training classes, develop discipleship and leadership programmes, promote Bible study and doctrinal teaching, support ministers attending theological institutions, build a culture of lifelong learning" data-i18n-attr="alt:alt.14" loading="lazy" width="1080" height="1080">
         </button>
       </div>
     </section>
@@ -151,10 +155,10 @@
     <section id="video" class="section-pad video-section">
       <div class="section-head">
         <div>
-          <p class="eyebrow">02 / MOTION</p>
-          <h2>Video production</h2>
+          <p class="eyebrow" data-i18n="vid.eyebrow">02 / MOTION</p>
+          <h2 data-i18n="vid.h2">Video production</h2>
         </div>
-        <p class="section-note">Short-form storytelling, event content and creative video edits built for digital audiences.</p>
+        <p class="section-note" data-i18n="vid.note">Short-form storytelling, event content and creative video edits built for digital audiences.</p>
       </div>
 
       <div class="video-grid">
@@ -162,70 +166,71 @@
           <video controls preload="metadata" poster="assets/posters/faithchild.jpg">
             <source src="assets/videos/faithchild.mp4" type="video/mp4">
           </video>
-          <div><span>VIDEO / SOCIAL</span><h3>FAITHCHILD</h3></div>
+          <div><span>VIDEO / SOCIAL</span><h3 class="notranslate" translate="no">FAITHCHILD</h3></div>
         </article>
         <article class="video-card">
           <video controls preload="metadata" poster="assets/posters/getting-ready.jpg">
             <source src="assets/videos/getting-ready.mp4" type="video/mp4">
           </video>
-          <div><span>VIDEO / SOCIAL</span><h3>Getting Ready</h3></div>
+          <div><span>VIDEO / SOCIAL</span><h3 class="notranslate" translate="no">Getting Ready</h3></div>
         </article>
         <article class="video-card">
           <video controls preload="metadata" poster="assets/posters/letter-of-love.jpg">
             <source src="assets/videos/letter-of-love.mp4" type="video/mp4">
           </video>
-          <div><span>VIDEO / STORYTELLING</span><h3>Letter of Love</h3></div>
+          <div><span>VIDEO / STORYTELLING</span><h3 class="notranslate" translate="no">Letter of Love</h3></div>
         </article>
         <article class="video-card video-wide">
           <video controls preload="metadata" poster="assets/posters/sweden.jpg">
             <source src="assets/videos/sweden.mp4" type="video/mp4">
           </video>
-          <div><span>VIDEO / EVENT</span><h3>Sweden — Event Content</h3></div>
+          <div><span data-i18n="vid.event">VIDEO / EVENT</span><h3 data-i18n="vid.sweden"><span class="notranslate" translate="no">Sweden</span> — Event Content</h3></div>
         </article>
       </div>
           </section>
 
     <section id="about" class="about section-pad">
       <div>
-        <p class="eyebrow">03 / ABOUT HKS</p>
-        <h2>Design is how I make an idea visible.</h2>
+        <p class="eyebrow" data-i18n="about.eyebrow">03 / ABOUT HKS</p>
+        <h2 data-i18n="about.h2">Design is how I make an idea visible.</h2>
       </div>
       <div class="about-copy">
-        <p>I'm Hezekiah Kolawole Shobowale, a creative and digital professional working across graphic design, video production, social media content and branding.</p>
-        <p>My work combines visual communication with hands-on production — from campaign artwork and event graphics to edited video and digital concepts.</p>
+        <p data-i18n="about.p1">I'm Hezekiah Kolawole Shobowale, a creative and digital professional working across graphic design, video production, social media content and branding.</p>
+        <p data-i18n="about.p2">My work combines visual communication with hands-on production — from campaign artwork and event graphics to edited video and digital concepts.</p>
         <div class="skill-list">
-          <span>Graphic Design</span><span>Video Editing</span><span>Colour Grading</span><span>Social Media</span><span>Branding</span><span>Creative Direction</span><span>WordPress</span><span>Figma</span>
+          <span data-i18n="skill.gd">Graphic Design</span><span data-i18n="skill.ve">Video Editing</span><span data-i18n="skill.cg">Colour Grading</span><span data-i18n="skill.sm">Social Media</span><span data-i18n="skill.br">Branding</span><span data-i18n="skill.cd">Creative Direction</span><span class="notranslate" translate="no">WordPress</span><span class="notranslate" translate="no">Figma</span>
         </div>
       </div>
     </section>
 
     <section class="tools section-pad">
-      <p class="eyebrow">04 / TOOLS</p>
-      <div class="tool-row">
+      <p class="eyebrow" data-i18n="tools.eyebrow">04 / TOOLS</p>
+      <div class="tool-row notranslate" translate="no">
         <span>Photoshop</span><span>Premiere Pro</span><span>DaVinci Resolve</span><span>Figma</span><span>WordPress</span><span>OpenArt</span><span>ElevenLabs</span><span>Suno</span>
       </div>
     </section>
 
     <section class="contact section-pad">
-      <p class="eyebrow">05 / CONTACT</p>
-      <h2>Have an idea?<br><em>Let's make it visual.</em></h2>
-      <a class="contact-email" href="mailto:shokolagraphics@gmail.com">shokolagraphics@gmail.com ↗</a>
+      <p class="eyebrow" data-i18n="contact.eyebrow">05 / CONTACT</p>
+      <h2 data-i18n="contact.h2">Have an idea?<br><em>Let's make it visual.</em></h2>
+      <a class="contact-email notranslate" translate="no" href="mailto:shokolagraphics@gmail.com">shokolagraphics@gmail.com ↗</a>
     </section>
   </main>
 
   <footer>
-    <span>HKS. · Hezekiah Kolawole Shobowale</span>
-    <span>Italy · Creative & Digital Media</span>
+    <span class="notranslate" translate="no">HKS. · Hezekiah Kolawole Shobowale</span>
+    <span data-i18n="footer.loc">Italy · Creative & Digital Media</span>
   </footer>
 
   <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" aria-label="Close">×</button>
+    <button class="lightbox-close" aria-label="Close" data-i18n-attr="aria-label:lb.close">×</button>
     <div class="lightbox-inner">
       <img id="lightbox-img" src="" alt="">
       <div><small id="lightbox-type"></small><h3 id="lightbox-title"></h3></div>
     </div>
   </div>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
   <script src="motion.js"></script>
 </body>

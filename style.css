@@ -213,3 +213,20 @@ html,body{overflow-x:clip} /* Theme 2 ticker uses -2vw side margins; stop it cau
   @keyframes blockshiftY{from{transform:translate3d(0,-3%,0)}to{transform:translate3d(0,3%,0)}}
 }
 @media(hover:none),(pointer:coarse){.cursor-dot{display:none}}
+
+/* Youth Outreach + Leaders Retreat: same strip treatment as Prayer Walk, two square panels each */
+.strip-gap{gap:14px;background:none;box-shadow:none}
+.strip-gap .strip-panel{box-shadow:0 26px 40px -16px rgba(0,0,0,.45)}
+.band-youth,.band-retreat{--band-a:var(--pink);--band-b:var(--lime)}
+.band-retreat{--band-a:var(--lime);--band-b:var(--orange)}
+.continuous-project.band-youth,.continuous-project.band-retreat{background:linear-gradient(90deg,var(--band-a) 0 50%,var(--band-b) 50% 100%)}
+.motion .continuous-project.band-youth,.motion .continuous-project.band-retreat{background:var(--band-b)}
+.motion .band-youth:before,.motion .band-retreat:before{background:linear-gradient(90deg,var(--band-a) 0 50%,var(--band-b) 50% 100%)}
+.band-retreat .continuous-strip{transform:rotate(1.2deg)}
+@media(max-width:850px){
+  .continuous-project.band-youth,.continuous-project.band-retreat{background:linear-gradient(180deg,var(--band-a) 0 50%,var(--band-b) 50% 100%)}
+  .motion .continuous-project.band-youth,.motion .continuous-project.band-retreat{background:var(--band-b)}
+  .motion .band-youth:before,.motion .band-retreat:before{background:linear-gradient(180deg,var(--band-a) 0 50%,var(--band-b) 50% 100%)}
+  .band-retreat .continuous-strip{transform:none}
+}
+.strip-panel img{height:auto}

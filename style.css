@@ -139,7 +139,7 @@ footer span:first-child{font-family:'Archivo Black',sans-serif;font-size:1rem}
 /* ===== Endless curved loop (theme-2-loop) — only applied when JS adds .loop (not under reduce-motion) ===== */
 .work-grid.loop,.video-grid.loop{display:block;position:relative;overflow:hidden;perspective:1200px;padding:50px 0 40px;margin:0 calc(-1 * max(4vw,calc((100vw - var(--max))/2 + 4vw)));touch-action:pan-y;
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
-.loop-track{display:flex;gap:14px;width:max-content;align-items:flex-start;transform-style:preserve-3d;will-change:transform}
+.loop-track{display:flex;gap:14px;width:max-content;align-items:flex-start;will-change:transform} /* flat track: each card carries its own perspective, so 3D-turned cards never sink behind the track and lose clicks (video controls) */
 .loop .work-card,.loop .work-card.wide,.loop .work-card:nth-child(n){flex:0 0 260px;width:260px;grid-column:auto;transform:none;transition:none;will-change:transform,filter}
 .loop .work-card img,.loop .work-card.wide img{aspect-ratio:4/5;border-radius:22px/40px;box-shadow:0 26px 30px -16px rgba(0,0,0,.45)}
 .loop .card-overlay{opacity:0;transition:opacity .3s}.loop .is-centre .card-overlay,.loop .work-card:hover .card-overlay,.loop .work-card:focus-visible .card-overlay{opacity:1}

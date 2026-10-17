@@ -19,7 +19,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
     const track=document.createElement('div');track.className='loop-track';
     originals.forEach(el=>track.appendChild(el));
     grid.appendChild(track);grid.classList.add('loop');
-    const speed=grid.classList.contains('video-grid')?38:48; // px per second
+    const speed=grid.classList.contains('video-grid')?52:65; // px per second
     let setW=0,x=0,items=[],pos=[],paused=0,hover=false,touchHold=0,last=performance.now(),drag=null;
     const cloneSet=()=>originals.forEach(el=>{const c=el.cloneNode(true);c.setAttribute('aria-hidden','true');c.classList.add('loop-clone');
       c.querySelectorAll('button,a,video').forEach(n=>n.setAttribute('tabindex','-1'));if(c.matches('button'))c.setAttribute('tabindex','-1');track.appendChild(c)});
